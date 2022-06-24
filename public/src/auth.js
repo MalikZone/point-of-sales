@@ -23,9 +23,9 @@ const AuthController = ((SET) => {
                     beforeSend: (xhr) => {
                         SET.buttonLoader("#btn_submit");
                     },
-                    success: res => {
-                        window.location.href = `${SET.baseURL()}task`;
-                    },
+                    // success: res => {
+                    //     window.location.href = `${SET.baseURL()}task`;
+                    // },
                     error: err => {
                         toastr.error(
                             "Failed",
@@ -44,24 +44,6 @@ const AuthController = ((SET) => {
     const submitButton = () => {
         $('#btn_submit').on('click', function(e) {
             e.preventDefault()
-                // console.log('click');
-                // $("#form_login").validate({
-                //     errorClass: "is-invalid",
-                //     successClass: "is-valid",
-                //     validClass: "is-valid",
-                //     errorElement: "div",
-                //     errorPlacement: function(error, element) {
-                //         error.addClass("invalid-feedback");
-                //         error.insertAfter(element);
-                //     },
-                //     rules: {
-                //         email: "required",
-                //         password: "required",
-                //     },
-                //     submitHandler: (form) => {
-
-            //     },
-            // });
             let email = $('#email').val();
             let password = $('#password').val();
             $.ajax({

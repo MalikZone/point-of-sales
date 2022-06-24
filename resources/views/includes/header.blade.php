@@ -27,7 +27,7 @@
                 <div class="navbar navbar-collapse responsive-navbar p-0">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
                         <div class="d-flex order-lg-2">
-                            <div class="dropdown  d-flex message">
+                            {{-- <div class="dropdown  d-flex message">
                                 <a class="nav-link icon text-center" data-bs-toggle="dropdown" id="btn_saldo">
                                     <i class="fe fe-message-square"></i><span class="pulse-danger"></span>
                                 </a>
@@ -43,14 +43,14 @@
                                     </div>
 
                                 </div>
-                            </div>
+                            </div> --}}
                             <!-- MESSAGE-BOX -->
-                            <div class="dropdown d-flex header-settings">
+                            {{-- <div class="dropdown d-flex header-settings">
                                 <a href="javascript:void(0);" class="nav-link icon" data-bs-toggle="sidebar-right"
                                     data-target=".sidebar-right">
                                     <i class="fe fe-align-right"></i>
                                 </a>
-                            </div>
+                            </div> --}}
                             <!-- SIDE-MENU -->
                             <div class="dropdown d-flex profile-1">
                                 <a href="javascript:void(0)" data-bs-toggle="dropdown"
@@ -61,12 +61,12 @@
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                                     <div class="drop-heading">
                                         <div class="text-center">
-                                            <h5 class="text-dark mb-0 fs-14 fw-semibold">Percy Kewshun</h5>
-                                            <small class="text-muted">Senior Admin</small>
+                                            <h5 class="text-dark mb-0 fs-14 fw-semibold">{{Auth::user()->name}}</h5>
+                                            <small class="text-muted">{{Auth::user()->role}}</small>
                                         </div>
                                     </div>
                                     <div class="dropdown-divider m-0"></div>
-                                    <a class="dropdown-item" href="profile.html">
+                                    <a class="dropdown-item" href="#">
                                         <i class="dropdown-icon fe fe-user"></i> Profile
                                     </a>
                                     <a class="dropdown-item" href="javascript:void(0);" id="btn_logout">

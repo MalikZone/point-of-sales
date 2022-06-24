@@ -26,31 +26,18 @@
                 <li class="sub-category">
                     <h3>Pre-build Pages</h3>
                 </li>
-                <li class="slide">
-                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
-                            class="side-menu__icon fe fe-layers"></i><span class="side-menu__label">Inventory</span><i
-                            class="angle fe fe-chevron-right"></i></a>
-                    <ul class="slide-menu">
-                        <li class="side-menu-label1"><a href="javascript:void(0)">Pages</a></li>
-                        <li {{Auth::user()->role == "kasir" ? "hidden" : ""}}><a href="{{ route('product') }}" class="slide-item">Products</a></li>
-                        <li><a href="#" class="slide-item"> Other Page</a></li>
-                        <li><a href="#" class="slide-item"> Notifications List</a></li>
-                        <li><a href="#" class="slide-item"> Mail-Compose</a></li>
-                        <li><a href="#" class="slide-item"> Mail-Inbox</a></li>
-                        <li><a href="#" class="slide-item"> Mail-Read</a></li>
-                        <li><a href="#" class="slide-item"> Gallery</a></li>
-                    </ul>
-                </li>
-                <li class="slide">
-                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
-                            class="side-menu__icon fe fe-layers"></i><span class="side-menu__label">Page 2</span><i
-                            class="angle fe fe-chevron-right"></i></a>
-                </li>
-                <li class="slide">
-                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
-                            class="side-menu__icon fe fe-layers"></i><span class="side-menu__label">Page 3</span><i
-                            class="angle fe fe-chevron-right"></i></a>
-                </li>
+                @if (Auth::user()->role != "kasir")
+                    <li class="slide">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
+                                class="side-menu__icon fe fe-layers"></i><span class="side-menu__label">Inventory</span><i
+                                class="angle fe fe-chevron-right"></i></a>
+                        <ul class="slide-menu">
+                            <li class="side-menu-label1"><a href="javascript:void(0)">Pages</a></li>
+                            <li><a href="{{ route('supplier') }}" class="slide-item"> Suppliers</a></li>
+                            <li><a href="{{ route('product') }}" class="slide-item"> Products</a></li>
+                        </ul>
+                    </li>
+                @endif
             </ul>
             <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
                     width="24" height="24" viewBox="0 0 24 24">

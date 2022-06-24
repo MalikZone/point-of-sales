@@ -184,7 +184,7 @@ const UtilityController = (() => {
                 closeButton: true,
                 positionClass: "toast-top-full-width",
                 preventDuplicates: true,
-                // timeOut: "1500",
+                timeOut: "1000",
             };
         },
 
